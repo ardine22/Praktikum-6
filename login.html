@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Sederhana</title>
+  <style>
+    /* Styling sederhana agar rapi */
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; background:#f7f7fb; margin:0; padding:0;}
+    .wrap{max-width:380px; margin:8vh auto; background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:24px; box-shadow:0 10px 25px rgba(0,0,0,.05)}
+    h1{font-size:20px; margin:0 0 16px}
+    label{display:block; font-size:14px; margin:10px 0 6px}
+    input[type="text"], input[type="password"]{
+      width:100%; padding:10px 12px; border:1px solid #d1d5db; border-radius:8px; outline:none
+    }
+    input[type="text"]:focus, input[type="password"]:focus{border-color:#6366f1; box-shadow:0 0 0 3px rgba(99,102,241,.15)}
+    .btn{margin-top:14px; width:100%; padding:10px 12px; border:0; border-radius:8px; background:#6366f1; color:#fff; font-weight:600; cursor:pointer}
+    .btn:hover{filter:brightness(1.05)}
+    .hint{font-size:12px; color:#6b7280; margin-top:8px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Login</h1>
+
+    <!-- Form mengirim ke login.php via POST -->
+    <form action="login.php" method="POST" novalidate>
+      <label for="username">Username</label>
+      <input id="username" name="username" type="text" placeholder="Masukkan username" required />
+
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" placeholder="Masukkan password" required />
+
+      <button class="btn" type="submit">Masuk</button>
+      <p class="hint">Contoh tugas praktikum: validasi di sisi server (PHP) terhadap username &amp; password yang ditentukan.</p>
+    </form>
+  </div>
+</body>
+</html>
